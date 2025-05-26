@@ -52,14 +52,14 @@ Where:
 * A short write-up explaining:
 
   * How you structured the code
-  * How you approximated surface area
+  * How you approximated the surface area
   * Any challenges you faced
 
 
 ### Answers to the above questions
 
-  *How you structured the code
-  
+  * How I Structured the Code
+
       I organized everything into a single class called MobiusStrip, which keeps the code clean and modular. The idea was to encapsulate all the properties (like radius, width, and resolution) and methods (for generating the mesh, computing area and edge length, and plotting) into one object.
 
       The constructor handles setting up the parameters and generating the 3D coordinates using the parametric equations. I kept mesh generation as a separate method to keep things tidy. The other methods are focused and only do one thing each—either calculate surface area, compute edge length, or plot the strip. That way, the class is easy to read, modify, and test.
