@@ -56,8 +56,10 @@ Where:
   * Any challenges you faced
 
 
-### Answers to above questions
-  *How you structured the code?
+### Answers to the above questions
+
+  *How you structured the code
+  
       I organized everything into a single class called MobiusStrip, which keeps the code clean and modular. The idea was to encapsulate all the properties (like radius, width, and resolution) and methods (for generating the mesh, computing area and edge length, and plotting) into one object.
 
       The constructor handles setting up the parameters and generating the 3D coordinates using the parametric equations. I kept mesh generation as a separate method to keep things tidy. The other methods are focused and only do one thing each—either calculate surface area, compute edge length, or plot the strip. That way, the class is easy to read, modify, and test.
@@ -72,7 +74,7 @@ Where:
 
      One tricky part was handling the Möbius strip’s twist. Because it's a non-orientable surface, the parametric equations have to be crafted carefully so they “flip” properly as you go around the loop. Fortunately, the standard parametric form using u and v worked out nicely.
 
-     Another challenge was getting accurate area and edge calculations. Numerical integration can get rough if the mesh resolution (n) is too low, so I had to find a good balance between performance and precision. Using higher resolution helps with accuracy but slows things down and increases memory use.
+     Another challenge was getting accurate area and edge calculations. Numerical integration can get rough if the mesh resolution (n) is too low, so I had to find a good balance between performance and precision. Using higher resolution helps with accuracy, but slows things down and increases memory use.
 
       Plotting it was also a little fiddly—the Möbius strip loops over itself, so I had to make sure the mesh didn’t self-intersect visually in a weird way.
   
